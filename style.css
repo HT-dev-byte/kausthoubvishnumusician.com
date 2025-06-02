@@ -1,0 +1,16 @@
+body {
+  background-color: black;
+  color: green; /* neon green */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: green;
+}
+
+h1, h2 {
+  color: green;
+}
+p{
+color: green;
+}
