@@ -1,88 +1,111 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kausthoub Vishnu Musician</title>
   <link rel="stylesheet" href="webby.css">
+
+  <!-- AOS library for optional scroll animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-  <h1>Kausthoub Vishnu</h1>
-</header>
-
-<section id="About" class="reveal">
-  <h2>About</h2>
-  <img src="images/kvintro.jpg" width="200" height="200">
-
-  <p>
-    Kausthoub Vishnu is an accomplished alto saxophonist with more than 8 years of experience.
-    While rooted in jazz music, he is open to perform other styles if needed. Inspired by the
-    guidance of his teachers and mentors over the years, he aspires to emulate their mastery
-    and to leave an impact on his music. With a fervent dedication to lifelong learning and
-    artistic growth, Kausthoub Vishnu looks forward in his pursuit, fueled by his passion and
-    determination.
-  </p>
-</section>
-
-<section id="Music" class="reveal">
-  <h2>Music</h2>
-
-  <div class="music-grid">
-
-    <!-- Static image card -->
-    <div class="project-card reveal">
-      <img src="images/kvsax.jpg" width="200" height="200">
-    </div>
-
-    <!-- Instagram cards -->
-    <div class="project-card reveal">
-      <blockquote class="instagram-media" data-instgrm-captioned
-        data-instgrm-permalink="https://www.instagram.com/reel/DIqtGJKq2Sz/"
-        data-instgrm-version="14"></blockquote>
-    </div>
-
-    <div class="project-card reveal">
-      <blockquote class="instagram-media" data-instgrm-captioned
-        data-instgrm-permalink="https://www.instagram.com/reel/DId2lU7Sv8Q/"
-        data-instgrm-version="14"></blockquote>
-    </div>
-
-    <div class="project-card reveal">
-      <blockquote class="instagram-media" data-instgrm-captioned
-        data-instgrm-permalink="https://www.instagram.com/reel/DHbAuFAysNw/"
-        data-instgrm-version="14"></blockquote>
-    </div>
-
+  <!-- ======= Preloader ======= -->
+  <div id="preloader">
+    <div class="loader"></div>
   </div>
 
-  <script async src="//www.instagram.com/embed.js"></script>
+  <header class="reveal" data-aos="fade-down">
+    <h1>Kausthoub Vishnu</h1>
+  </header>
 
-  <p>Phone Number:</p>
-  <p><a href="tel:+12674816045">267-481-6045</a></p>
-  <p><a href="tel:+917200243519">+91 7200243519</a></p>
-  <p>Email Address:
-    <a href="mailto:kausthoub@gmail.com">kausthoub@gmail.com</a>
-  </p>
-</section>
+  <section id="About" class="reveal" data-aos="fade-up" data-aos-delay="100">
+    <h2>About</h2>
+    <img src="images/kvintro.jpg" width="200" height="200" class="fade-image">
 
-<script>
-  const reveals = document.querySelectorAll(".reveal");
+    <p>
+      Kausthoub Vishnu is an accomplished alto saxophonist with more than 8 years of experience.
+      While rooted in jazz music, he is open to perform other styles if needed. Inspired by the
+      guidance of his teachers and mentors over the years, he aspires to emulate their mastery
+      and to leave an impact on his music. With a fervent dedication to lifelong learning and
+      artistic growth, Kausthoub Vishnu looks forward in his pursuit, fueled by his passion and
+      determination.
+    </p>
+  </section>
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
+  <section id="Music" class="reveal" data-aos="fade-up" data-aos-delay="150">
+    <h2>Music</h2>
+
+    <div class="music-grid">
+
+      <!-- Static image card -->
+      <div class="project-card reveal" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/kvsax.jpg" width="200" height="200" class="fade-image">
+        <p>Live performance</p>
+      </div>
+
+      <!-- Instagram cards -->
+      <div class="project-card reveal" data-aos="zoom-in" data-aos-delay="250">
+        <blockquote class="instagram-media" data-instgrm-captioned
+          data-instgrm-permalink="https://www.instagram.com/reel/DIqtGJKq2Sz/"
+          data-instgrm-version="14"></blockquote>
+      </div>
+
+      <div class="project-card reveal" data-aos="zoom-in" data-aos-delay="300">
+        <blockquote class="instagram-media" data-instgrm-captioned
+          data-instgrm-permalink="https://www.instagram.com/reel/DId2lU7Sv8Q/"
+          data-instgrm-version="14"></blockquote>
+      </div>
+
+      <div class="project-card reveal" data-aos="zoom-in" data-aos-delay="350">
+        <blockquote class="instagram-media" data-instgrm-captioned
+          data-instgrm-permalink="https://www.instagram.com/reel/DHbAuFAysNw/"
+          data-instgrm-version="14"></blockquote>
+      </div>
+
+    </div>
+
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <p>Phone Number:</p>
+    <p><a href="tel:+12674816045">267-481-6045</a></p>
+    <p><a href="tel:+917200243519">+91 7200243519</a></p>
+    <p>Email Address:
+      <a href="mailto:kausthoub@gmail.com">kausthoub@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- ======= Scripts ======= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Preloader fade out
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0';
+      preloader.style.pointerEvents = 'none';
+      setTimeout(() => preloader.remove(), 600);
     });
-  }, { threshold: 0.15 });
 
-  reveals.forEach(r => observer.observe(r));
-</script>
+    // Reveal-on-scroll using IntersectionObserver
+    const reveals = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(r => observer.observe(r));
+
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
+  </script>
 
 </body>
 </html>
+
 
 
 
