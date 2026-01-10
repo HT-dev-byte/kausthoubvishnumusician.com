@@ -1,23 +1,60 @@
-body{
-background-color: navy;
-margin: 0;
-h1{
-color: white;
-}
-h2{
-color: white;
-}
-p{
-color: white;
-}
-h3{
-color: white;    
-}
-h4{
-color: white;    
-}
-a[href]{
-color: white;
+body {
+  background-color: navy;
+  margin: 0;
 }
 
+h1, h2, h3, h4, p, a {
+  color: white;
 }
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 123, 255, 0.08),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+}
+
+section h2 {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Soft underline animation on links */
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+
+.project-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) rotate(-0.3deg);
+}
+
+
