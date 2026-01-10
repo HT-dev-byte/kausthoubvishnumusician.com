@@ -1,5 +1,138 @@
 <!DOCTYPE html> 
 <html lang="en">
+   <style>
+    /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: navy;
+      color: white;
+      line-height: 1.7;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(135deg, #020b2e, navy);
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        rgba(0,123,255,0.12),
+        rgba(255,255,255,0)
+      );
+      pointer-events: none;
+    }
+
+    section h2 {
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid rgba(255,255,255,0.25);
+      padding-bottom: 0.5rem;
+    }
+
+    /* ===== MEDIA & CARDS ===== */
+    img {
+      border-radius: 50%;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.7);
+      margin: 1rem 0;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.06);
+      border-radius: 18px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.45);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.7);
+    }
+
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card h3 {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 0.5rem;
+    }
+
+    /* ===== LINKS ===== */
+    a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #4da3ff;
+      transition: width 0.3s ease;
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,6 +237,7 @@
 
 </body>
 </html>
+
 
 
 
