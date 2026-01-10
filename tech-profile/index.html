@@ -70,7 +70,40 @@ img {
   margin: 1rem 0;
   display: block;
 }
+    /* ===== SOCIAL BUTTONS ===== */
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
 
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: rgba(0,255,0,0.1); /* neon glow background */
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid green;
+  border-radius: 8px;
+  box-shadow: 0 0 10px green;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: green;
+  color: black;
+  box-shadow: 0 0 20px green, 0 0 30px green;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
 /* ===== SCROLL REVEAL ===== */
 .reveal {
   opacity: 0;
