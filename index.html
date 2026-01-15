@@ -89,6 +89,39 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+/*==SOCIAL BUTTONS==*/
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: rgba(0, 0, 255, 0.1); /* neon glow background */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid blue;
+  border-radius: 8px;
+  box-shadow: 0 0 10px white;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: white;
+  color: blue;
+  box-shadow: 0 0 20px blue, 0 0 30px blue;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
 
 /* ===== SCROLL REVEAL ===== */
 .reveal {
@@ -157,6 +190,22 @@ a:hover::after {
     <p>Email Address:
       <a href="mailto:kausthoub@gmail.com">kausthoub@gmail.com</a>
     </p>
+      <div class="social-buttons">
+   <a href="https://www.instagram.com/kavish.kvn/" target="_blank" class="social-btn instagram">
+    Instagram
+  </a>
+       <div class="social-buttons">
+   <a href="https://beatgig.com/@kausthoubvishnu?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnOMovIQ7M4a0nCrAMfNwUmzfKqtAKfYMG2RqcsRvc74AS60cYTJP-YCjM0Tg_aem_OCjPFxcdQ2j22RDZCgwMlg" target="_blank" class="social-btn beatgig">
+    Beatgig
+   </a>  
+    <div class="social-buttons">
+   <a href="https://kausthoubvishnumusic.bandcamp.com/" target="_blank" class="social-btn bandcamp">
+Bandcamp
+  </a> 
+   <div class="social-buttons">
+   <a href="https://www.facebook.com/kavish.suresh.39/" target="_blank" class="social-btn facebook">
+   Facebook
+  </a>  
   </section>
 
   <!-- ======= Scripts ======= -->
@@ -187,6 +236,7 @@ a:hover::after {
 
 </body>
 </html>
+
 
 
 
